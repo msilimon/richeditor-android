@@ -195,6 +195,11 @@ RE.insertImageWH = function(url, alt, width, height) {
     RE.insertHTML(html);
 }
 
+RE.insertImageBase64 = function(base64Data, alt, width) {
+    var html = '<img src="data:image/jpg;charset=utf-8;base64,' + base64Data + '" alt="' + alt + '" width="' + width + '"/>';
+    RE.insertHTML(html);
+}
+
 RE.insertVideo = function(url, alt) {
     var html = '<video src="' + url + '" controls></video><br>';
     RE.insertHTML(html);

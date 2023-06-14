@@ -1,12 +1,17 @@
 package jp.wasabeef.sample;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import jp.wasabeef.richeditor.RichEditor;
 
 public class MainActivity extends AppCompatActivity {
@@ -217,6 +222,21 @@ public class MainActivity extends AppCompatActivity {
       public void onClick(View v) {
         mEditor.insertImage("https://raw.githubusercontent.com/wasabeef/art/master/chip.jpg",
           "dachshund", 320);
+      }
+    });
+
+    findViewById(R.id.action_insert_image_base64).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dog);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, baos);
+        byte[] imageBytes = baos.toByteArray();
+        String imageString = Base64.encodeToString(imageBytes, Base64.NO_WRAP);
+        mEditor.insertImageBase64(imageString, "Base64 Image", 320);
+        try {
+          baos.close();
+        } catch (IOException ignored) {
+        }
       }
     });
 

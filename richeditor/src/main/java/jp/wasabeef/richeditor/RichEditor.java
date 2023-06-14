@@ -402,6 +402,18 @@ public class RichEditor extends WebView {
     exec("javascript:RE.insertImageWH('" + url + "', '" + alt + "','" + width + "', '" + height + "');");
   }
 
+  /**
+   * the image base64 string according to the specific width of the image automatically
+   *
+   * @param imageString
+   * @param alt
+   * @param width
+   */
+  public void insertImageBase64(String imageString, String alt, int width) {
+    exec("javascript:RE.prepareInsert();");
+    exec("javascript:RE.insertImageBase64('" + imageString + "', '" + alt + "','" + width + "');");
+  }
+
   public void insertVideo(String url) {
     exec("javascript:RE.prepareInsert();");
     exec("javascript:RE.insertVideo('" + url + "');");
