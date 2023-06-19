@@ -13,6 +13,9 @@
   <a href="https://search.maven.org/artifact/jp.wasabeef/richeditor-android">
     <img src="https://maven-badges.herokuapp.com/maven-central/jp.wasabeef/richeditor-android/badge.svg" />
   </a>
+   <a href="https://jitpack.io/#msilimon/richeditor-android">
+    <img src="https://jitpack.io/v/msilimon/richeditor-android.svg" />
+  </a>
 </p>
 
 `RichEditor for Android` is a beautiful Rich Text `WYSIWYG Editor` for `Android`.
@@ -45,6 +48,7 @@ Supported Functions
 - [x] Indent
 - [x] Outdent
 - [x] Insert Image
+- [x] Insert Image Base64 String
 - [x] Insert Youtube
 - [x] Insert Video
 - [x] Insert Audio
