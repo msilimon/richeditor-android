@@ -10,10 +10,7 @@
   <a href="https://www.apache.org/licenses/LICENSE-2.0">
     <img src="https://img.shields.io/badge/license-Apache%202-blue.svg" />
   </a>
-  <a href="https://search.maven.org/artifact/jp.wasabeef/richeditor-android">
-    <img src="https://maven-badges.herokuapp.com/maven-central/jp.wasabeef/richeditor-android/badge.svg" />
-  </a>
-   <a href="https://jitpack.io/#msilimon/richeditor-android">
+  <a href="https://jitpack.io/#msilimon/richeditor-android">
     <img src="https://jitpack.io/v/msilimon/richeditor-android.svg" />
   </a>
 </p>
